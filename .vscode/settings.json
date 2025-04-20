@@ -1,0 +1,14 @@
+{
+    "redisXplorer.config": {
+        "profiles": [
+            {
+                "name": "falkordb",
+                "host": "r-6jissuruar.instance-ke10zfyqz.hc-mjfsf95pz.us-west-2.aws.f2e0a955bb84.cloud",
+                "accessKey": "C0reattack",
+                "filter": "*",
+                "port": "58718"
+            }
+        ],
+        "scanLimit": 200
+    }
+}
