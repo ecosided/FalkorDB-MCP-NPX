@@ -1,5 +1,5 @@
 {
-  "name": "falkordb-mcpserver",
+  "name": "falkordb-mcp-server",
   "version": "1.0.0",
   "description": "Model Context Protocol server for FalkorDB",
   "main": "dist/index.js",

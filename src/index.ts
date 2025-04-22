@@ -49,21 +49,22 @@ server.tool("list-graphs", {}, async (args, extra) => {
   const formattedGraphNames = graphNames.filter(name => !name.includes('schema')).map(name => ({ name }));
 
   // Format the result according to MCP standards
-  // const formattedResult: MCPResponse = {
-  //   data: formattedGraphNames,
-  //   metadata: {
-  //     timestamp: new Date().toISOString(),
-  //     queryTime,
-  //     provider: 'FalkorDB MCP Server',
-  //     source: 'falkordb'
-  //   }
-  // };
+  const formattedResult: MCPResponse = {
+    data: formattedGraphNames,
+    metadata: {
+      timestamp: new Date().toISOString(),
+      queryTime,
+      provider: 'FalkorDB MCP Server',
+      source: 'falkordb'
+    }
+  };
+  console.log("Graph Names: " + JSON.stringify(formattedGraphNames));
 
   return {
     content: [
       {
         type: "text",
-        text: JSON.stringify(formattedGraphNames, null, 2),
+        text: JSON.stringify(formattedResult),
       },
     ],
   };
